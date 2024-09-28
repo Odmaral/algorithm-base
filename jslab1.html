@@ -59,11 +59,11 @@
 
     let score=parseInt(prompt("Тоон утга оруулана уу."));
        switch(true){
-        case (score <=59): alert("F");break;
-        case (score >=60 && score<69):alert("D");break;
-        case (score >=70 && score<79):alert("C");break;
-        case (score >=80 && score<89):alert("B");break;
-        case (score >=90 && score<100):alert("A");break;
+        case (score <=59): alert(score  +" F");break;
+        case (score >=60 && score<69):alert(score  +" бол D үнэлгээтэй байна");break;
+        case (score >=70 && score<79):alert(score +" бол C үнэлгээтэй байна");break;
+        case (score >=80 && score<89):alert(score  +" бол B үнэлгээтэй байна");break;
+        case (score >=90 && score<100):alert(score  +" бол A үнэлгээтэй байна");break;
         default: alert("хамаарахгүй утга оруулсан байна.");
        }
                 
