@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+    </head>
+        <body>
+            <!-- <form> -->
+                <input id="too" type="text" placeholder="тоо"/>
+                <button onclick="sum()">+</button>
+                <button onclick="minus()">-</button>
+                <button onclick="multi()">*</button>
+                <button onclick="div()">/</button>
+                <button onclick="equal()">=</button>
+                <h1 id="result"></h1>
+            <!-- </form> -->
+            <script>
+                let too=document.getElementById("too1");
+                let hariu=document.getElementById("result");
+                let a=0;
+                    function sum(){
+                        result.innerHTML=parseInt(too.value);
+                        too.value="";
+                    }
+                    function equal(){
+                        result.innerHTML=a+parseInt(too.value);
+                        too.value="";
+                    }
+
+                    // function minus(){
+                    //     result.innerHTML=too1,value-too2.value;
+                    //     too1.value="";
+                    //     too2.value="";
+                    // }
+                    // function multi(){
+                    //     result.innerHTML=too1.value*too2.value;
+                    //     too1.value="";
+                    //     too2.value="";
+                    // }
+                    // function div(){
+                    //     result.innerHTML=too1.value/too2.value;
+                    //     too1.value="";
+                    //     too2.value="";
+                    // }
+                </script>
+        </body>
+
+
+</html>

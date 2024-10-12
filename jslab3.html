@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+    </head>
+        <body>
+            <form>
+                <input id="too1" type="text" placeholder="Эхний тоо"/>
+                <input id="too2" type="text" placeholder="Дараагийн тоо"/>
+                <button onclick="sum()">+</button>
+                <button onclick="minus()">-</button>
+                <button onclick="multi()">*</button>
+                <button onclick="div()">/</button>
+                <h1 id="result"></h1>
+            </form>
+            <script>
+                let too1=document.getElementById("too1");
+                let too2=document.getElementById("too2");
+                let hariu=document.getElementById("result");
+                    function sum(){
+                        result.innerHTML=parseInt(too1.value)+parseInt(too2.value);
+                        too1.value="";
+                        too2.value="";
+                    }
+                    function minus(){
+                        result.innerHTML=too1,value-too2.value;
+                        too1.value="";
+                        too2.value="";
+                    }
+                    function multi(){
+                        result.innerHTML=too1.value*too2.value;
+                        too1.value="";
+                        too2.value="";
+                    }
+                    function div(){
+                        result.innerHTML=too1.value/too2.value;
+                        too1.value="";
+                        too2.value="";
+                    }
+                </script>
+        </body>
+
+
+</html>
