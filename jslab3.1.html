@@ -1,45 +1,138 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
+        <link rel="stylesheet" href="lab3.1.css">
     </head>
         <body>
-            <!-- <form> -->
-                <input id="too" type="text" placeholder="тоо"/>
-                <button onclick="sum()">+</button>
-                <button onclick="minus()">-</button>
-                <button onclick="multi()">*</button>
-                <button onclick="div()">/</button>
-                <button onclick="equal()">=</button>
-                <h1 id="result"></h1>
-            <!-- </form> -->
+            <div class="container">
+                <div class="result">
+                    <span>0</span>
+                </div>
+                <div class="buttons">
+                    <button  class="item item1 clear">AC</button>
+                    <button  class="item item1 negative">+/-</button>
+                    <button  class="item percent sign">%</button>
+                    <button  class="item item3 sign">/</button>
+                    <button  class="item numbers">7</button>
+                    <button  class="item numbers">8</button>
+                    <button  class="item numbers">9</button>
+                    <button  class="item item3 sign">x</button>
+                    <button  class="item numbers">4</button>
+                    <button  class="item numbers">5</button>
+                    <button  class="item numbers">6</button>
+                    <button  class="item item3 sign">-</button>
+                    <button  class="item numbers">1</button>
+                    <button  class="item numbers">2</button>
+                    <button  class="item numbers">3</button>
+                    <button  class="item item3 sign">+</button>
+                    <button  class="item itemZero numbers">0</button>
+                    <button  class="item coma">,</button>
+                    <button  class="item item3 equals">=</button>
+                </div>
+            </div>
             <script>
-                let too=document.getElementById("too1");
-                let hariu=document.getElementById("result");
-                let a=0;
-                    function sum(){
-                        result.innerHTML=parseInt(too.value);
-                        too.value="";
-                    }
-                    function equal(){
-                        result.innerHTML=a+parseInt(too.value);
-                        too.value="";
-                    }
+            const result = document.querySelector('.result span');
+const numbers = document.querySelectorAll('.numbers');
+const signs = document.querySelectorAll('.sign');
+const equals = document.querySelector('.equals');
+const clears = document.querySelector('.clear');
+const percent = document.querySelector('.percent');
+const negative = document.querySelector('.negative');
 
-                    // function minus(){
-                    //     result.innerHTML=too1,value-too2.value;
-                    //     too1.value="";
-                    //     too2.value="";
-                    // }
-                    // function multi(){
-                    //     result.innerHTML=too1.value*too2.value;
-                    //     too1.value="";
-                    //     too2.value="";
-                    // }
-                    // function div(){
-                    //     result.innerHTML=too1.value/too2.value;
-                    //     too1.value="";
-                    //     too2.value="";
-                    // }
-                </script>
+let num1 = "";
+let isNum1 = false;
+let num2 = "";
+let isNum2 = false;
+let sign = "";
+let resultV = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i].addEventListener('click', (e) => {
+        let atr = e.target.textContent;
+        if (isNum1 === false) {
+            getnum1(atr);
+        } else {
+            getnum2(atr);
+        }
+    });
+}
+
+function getnum1(el) {
+    result.innerHTML = "";
+    num1 += el;
+    result.innerHTML = num1;
+    num1 = +num1; // Convert to number
+}
+
+function getnum2(el) {
+    if (num1 !== "" && sign !== "") {
+        num2 += el;
+        result.innerHTML = num2;
+        num2 = +num2; // Convert to number
+    }
+}
+
+function getSign() {
+    for (let i = 0; i < signs.length; i++) {
+        signs[i].addEventListener('click', (e) => {
+            sign = e.target.textContent;
+            isNum1 = true;
+        });
+    }
+}
+
+getSign();
+
+equals.addEventListener('click', () => {
+    result.innerHTML = "";
+    if (sign === "+") {
+        resultV = num1 + num2;
+    } else if (sign === "-") {
+        resultV = num1 - num2;
+    } else if (sign === "x") {
+        resultV = num1 * num2;
+    } else if (sign === "/") {
+        resultV = num1 / num2;
+    }
+    result.innerHTML = resultV;
+    num1 = resultV;
+    num2 = "";
+});
+
+negative.addEventListener('click', () => {
+    result.innerHTML = "";
+    if (num1 !== "") {
+        resultV = -num1;
+        num1 = resultV;
+    }
+    if (num1 !== "" && num2 !== "" && sign !== "") {
+        resultV = -resultV;
+    }
+    result.innerHTML = resultV;
+});
+
+percent.addEventListener('click', () => {
+    result.innerHTML = "";
+    if (num1 !== "") {
+        resultV = num1 / 100;
+        num1 = resultV;
+    }
+    if (num1 !== "" && num2 !== "" && sign !== "") {
+        resultV = resultV / 100;
+    }
+    result.innerHTML = resultV;
+});
+
+clears.addEventListener('click', () => {
+    result.innerHTML = 0;
+    num1 = "";
+    isNum1 = false;
+    num2 = "";
+    isNum2 = false;
+    sign = "";
+    resultV = 0;
+});
+            </script>
         </body>
 
 
