@@ -32,106 +32,106 @@
             </div>
             <script>
             const result = document.querySelector('.result span');
-const numbers = document.querySelectorAll('.numbers');
-const signs = document.querySelectorAll('.sign');
-const equals = document.querySelector('.equals');
-const clears = document.querySelector('.clear');
-const percent = document.querySelector('.percent');
-const negative = document.querySelector('.negative');
+            const numbers = document.querySelectorAll('.numbers');
+            const signs = document.querySelectorAll('.sign');
+            const equals = document.querySelector('.equals');
+            const clears = document.querySelector('.clear');
+            const percent = document.querySelector('.percent');
+            const negative = document.querySelector('.negative');
 
-let num1 = "";
-let isNum1 = false;
-let num2 = "";
-let isNum2 = false;
-let sign = "";
-let resultV = 0;
+                    let num1 = "";
+                    let isNum1 = false;
+                    let num2 = "";
+                    let isNum2 = false;
+                    let sign = "";
+                    let resultV = 0;
 
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener('click', (e) => {
-        let atr = e.target.textContent;
-        if (isNum1 === false) {
-            getnum1(atr);
-        } else {
-            getnum2(atr);
-        }
-    });
-}
+                for (let i = 0; i < numbers.length; i++) {
+                    numbers[i].addEventListener('click', (e) => {
+                        let atr = e.target.textContent;
+                        if (isNum1 === false) {
+                            getnum1(atr);
+                        } else {
+                            getnum2(atr);
+                        }
+                    });
+                }
 
-function getnum1(el) {
-    result.innerHTML = "";
-    num1 += el;
-    result.innerHTML = num1;
-    num1 = +num1; // Convert to number
-}
+                function getnum1(el) {
+                    result.innerHTML = "";
+                    num1 += el;
+                    result.innerHTML = num1;
+                    num1 = +num1; 
+                }
 
-function getnum2(el) {
-    if (num1 !== "" && sign !== "") {
-        num2 += el;
-        result.innerHTML = num2;
-        num2 = +num2; // Convert to number
-    }
-}
+                function getnum2(el) {
+                    if (num1 !== "" && sign !== "") {
+                        num2 += el;
+                        result.innerHTML = num2;
+                        num2 = +num2; 
+                    }
+                }
 
-function getSign() {
-    for (let i = 0; i < signs.length; i++) {
-        signs[i].addEventListener('click', (e) => {
-            sign = e.target.textContent;
-            isNum1 = true;
-        });
-    }
-}
+                function getSign() {
+                    for (let i = 0; i < signs.length; i++) {
+                        signs[i].addEventListener('click', (e) => {
+                            sign = e.target.textContent;
+                            isNum1 = true;
+                        });
+                    }
+                }
 
-getSign();
+                getSign();
 
-equals.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (sign === "+") {
-        resultV = num1 + num2;
-    } else if (sign === "-") {
-        resultV = num1 - num2;
-    } else if (sign === "x") {
-        resultV = num1 * num2;
-    } else if (sign === "/") {
-        resultV = num1 / num2;
-    }
-    result.innerHTML = resultV;
-    num1 = resultV;
-    num2 = "";
-});
+                equals.addEventListener('click', () => {
+                    result.innerHTML = "";
+                    if (sign === "+") {
+                        resultV = num1 + num2;
+                    } else if (sign === "-") {
+                        resultV = num1 - num2;
+                    } else if (sign === "x") {
+                        resultV = num1 * num2;
+                    } else if (sign === "/") {
+                        resultV = num1 / num2;
+                    }
+                    result.innerHTML = resultV;
+                    num1 = resultV;
+                    num2 = "";
+                });
 
-negative.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (num1 !== "") {
-        resultV = -num1;
-        num1 = resultV;
-    }
-    if (num1 !== "" && num2 !== "" && sign !== "") {
-        resultV = -resultV;
-    }
-    result.innerHTML = resultV;
-});
+                negative.addEventListener('click', () => {
+                    result.innerHTML = "";
+                    if (num1 !== "") {
+                        resultV = -num1;
+                        num1 = resultV;
+                    }
+                    if (num1 !== "" && num2 !== "" && sign !== "") {
+                        resultV = -resultV;
+                    }
+                    result.innerHTML = resultV;
+                });
 
-percent.addEventListener('click', () => {
-    result.innerHTML = "";
-    if (num1 !== "") {
-        resultV = num1 / 100;
-        num1 = resultV;
-    }
-    if (num1 !== "" && num2 !== "" && sign !== "") {
-        resultV = resultV / 100;
-    }
-    result.innerHTML = resultV;
-});
+                percent.addEventListener('click', () => {
+                    result.innerHTML = "";
+                    if (num1 !== "") {
+                        resultV = num1 / 100;
+                        num1 = resultV;
+                    }
+                    if (num1 !== "" && num2 !== "" && sign !== "") {
+                        resultV = resultV / 100;
+                    }
+                    result.innerHTML = resultV;
+                });
 
-clears.addEventListener('click', () => {
-    result.innerHTML = 0;
-    num1 = "";
-    isNum1 = false;
-    num2 = "";
-    isNum2 = false;
-    sign = "";
-    resultV = 0;
-});
+                clears.addEventListener('click', () => {
+                    result.innerHTML = 0;
+                    num1 = "";
+                    isNum1 = false;
+                    num2 = "";
+                    isNum2 = false;
+                    sign = "";
+                    resultV = 0;
+                });
             </script>
         </body>
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let nuuts_ug="";
+            let uldegdel=0;
+            while(nuuts_ug!="123"){
+                nuuts_ug=prompt(" нууц үгийг зөв оруулана уу.");
+                if (nuuts_ug==123){
+                    while(true){
+                        let command=prompt("1.Орлого 2.Зарлага 3.Үлдэгдэл харах 4.Гарах");
+                        if(command==1){
+                            orlogo();
+                        } else if(command==2){
+                            zarlaga();
+                        } else if(command==3){
+                            uldegdelHarah();
+                        } else if(command==4){
+                            break;
+                        } else if(command==" "){
+                            alert("Хоосон утга байна");
+                        }
+                        
+                    }
+                }
+            }
+        function orlogo(){
+            let R=parseInt(prompt("Мөнгөн дүнгээ оруулана уу"));
+            uldegdel+=R;
+        }
+        function zarlaga(){
+            let Z=parseInt(prompt("Мөнгөн дүнгээ оруулана уу"));
+            if(uldegdel<=Z){
+                alert("Үлдэгдэл хүрэлцэхгүй байна");
+            } else{
+                uldegdel=uldegdel-Z-100;
+            }
+        }
+        function uldegdelHarah(){
+            alert("Дансны үлдэгдэл:"+uldegdel);
+        }
+        </script>
+    </body>
+</html>

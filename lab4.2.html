@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // let arr=['мэдээллийн систем', 'Програм хангамж','нББ', 'Татвар', 'Эмч' ];
+            // alert(arr);
+            // arr.unshift("Багш");
+            // arr.shift();
+            // arr.shift();
+            // arr.pop();//suuliin element hasah
+            // arr.push('Багш');//suuliin element dr nemeh
+            // alert(arr);
+            // alert(arr.indexof("НББ"));
+            // alert(arr.lastIndexOf("НББ"));
+            //********************
+           let arr=[];
+           let max=0;
+           let min=100;
+           let sum=0;
+           let replace=0;
+           let maxIndex=0;
+           let minIndex=0;
+           for(let i=0; i<10; i++){
+             let random=Math.floor(Math.random()*100+1);
+             arr.push(random);
+             if(arr[i]<min){
+                min=arr[i];
+                minIndex=i;
+             } else if(arr[i]>max){
+                max=arr[i];
+                maxIndex=i;
+             }
+             sum+=arr[i];//sum+=random;
+           }
+           console.log("old array:"+arr);
+           replace=arr[maxIndex];
+           arr[maxIndex]=arr[minIndex];
+           arr[minIndex]=replace;
+           console.log("new massive:"+arr)
+           alert(arr+'\n' +"max:"+max+ '\n'+"min:"+min+'\n'+"sum:"+sum+'\n'+arr);
+        
+        //***********************************************
+
+
+            
+
+        </script>
+    </body>
+</html>
