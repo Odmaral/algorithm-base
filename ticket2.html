@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- <h1 id="minMax"></h1>
+        <p id="random"></p> -->
+        <!-- <div id="redbox" style="width:100px; height:100px; background-color:red;" onclick="changeColor()"></div> -->
+        <script>
+            // <!--1-->
+        //    let too=[];
+
+        //    for(let i=0; i<10; i++){
+        //      too.push(Math.floor(Math.random()*100+1));
+        //    }
+        //    document.getElementById('random').textContent=too.join(',');
+        //    let max=Math.max(...too);
+        //    let min=Math.min(... too);
+        //    document.getElementById('minMax').textContent=`хамгийн их утга:${max}, хамгийн их бага:${min}`;
+
+           // <!-- 2 -->
+            // push(): Массивын төгсгөлд шинэ элемент нэмнэ.
+
+            // let fruits = ['Apple', 'Banana', 'Orange'];
+            // // 'push' ашиглан шинэ жимс нэмнэ
+            // fruits.push('Mango', 'Pineapple');
+            // console.log(fruits); 
+            // // ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple']
+            
+            // pop(): Массивын сүүлийн элементийг хасна.
+            // let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+            // // 'pop' ашиглан сүүлийн элементээ хасна
+            // let removedFruit = fruits.pop();
+            // console.log(fruits); 
+            // // ['Apple', 'Banana', 'Orange']
+            // console.log(removedFruit); 
+            // // 'Mango'
+            // reduce(): Массивын бүх элементийг нэгтгэж нэг утга үүсгэнэ (жишээ нь, нийлбэр, дундаж тоо гэх мэт).
+
+            // let numbers = [1, 2, 3, 4, 5];
+            // // 'reduce' ашиглан бүх элементийг нэмнэ
+            // let sum = numbers.reduce(function(accumulator, currentValue) {
+            // return accumulator + currentValue;
+            // }, 0); // 0 нь эхлээд accumulator утга
+            // console.log(sum); 
+            // // 15
+
+            // <!-- 3 -->
+        //     function changeColor(){
+        //         var div=document.getElementById('redbox')
+        //         if(div.style.backgroundColor==='red'){
+        //         div.style.backgroundColor='blue';
+        //     }
+        //     else{
+        //         div.style.backgroundColor='red';
+        //     }
+        // }
+            // <!-- 4 -->
+            let word="Javascript";
+            let change="";
+            for( let i=0; i<word.length; i++){
+                if(word[i]==="a"){
+                    change+="";
+                }
+                else{
+                    change+=word[i];
+                }
+            }
+            alert("Өөрчлөлт:"+change);
+
+
+
+        </script>
+    </body>
+</html>
