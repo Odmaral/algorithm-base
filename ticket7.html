@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1 id="RandomNum"></h1>
+        <h2 id="Min" style="color: red;"></h2>
+        <h2 id="Max" style="color:green"></h2>
+        <script>
+            // <!-- 1 -->
+            // let number1=Math.floor(Math.random()*20+1);
+            // let number2=Math.floor(Math.random()*20+1);
+            // document.getElementById('RandomNum').textContent=  `RandomNum1:${number1}, RandomNum2:${number2}`;
+
+            // let min=Math.min(number1,number2);
+            // let max=Math.max(number1,number2);
+            // document.getElementById("Min").textContent=`Minimum value:${min}`;
+            // document.getElementById("Max").textContent=`Minimum value:${max}`;
+
+            // <!-- 2 -->
+                // push(): Массивын төгсгөлд шинэ элемент нэмнэ.
+
+                // let fruits = ['Apple', 'Banana', 'Orange'];
+                // 'push' ашиглан шинэ жимс нэмнэ
+                // fruits.push('Mango', 'Pineapple');
+                // console.log(fruits); 
+                // ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple']
+
+                //slice() нь эх массивыг өөрчлөхгүйгээр тодорхой хэсгийг авчирдаг.
+                // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                // let result="";
+                // result=months.slice(7,11)
+                // console.log(result);
+
+                // shift(): Массивын эхнээс нэг элементийг устгана.
+                // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                // let result="";
+                // console.log(months);
+                // result=months.shift();
+                // console.log(months);
+
+            // <!-- 3 -->    
+                //  let too1=parseInt(prompt(" Дурын тоо оруулана уу"))
+                //  let too2=parseInt(prompt(" Дурын тоо оруулана уу"))
+                //  alert("Оруулсан 2 тооны нийлбэр:"+(too1*too2))                       
+
+
+            // <!-- 4 -->
+            let number=800;
+            while( number>=300){
+                if( number%2===0){
+                    console.log(number);
+                }  
+                number--;
+            }
+
+        </script>
+    </body>
+</html>

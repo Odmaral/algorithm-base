@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- <h1 id="MaxMin"></h1>
+        <p id="Random"></p> -->
+        <input type="text" id="myInput" placeholder="Бичих...">
+        <!-- b үсгийн тоог харуулах div -->
+        <div id="myDiv">b үсгийн тоо: 0</div>
+        <script>
+        // <!-- 1 -->
+            // let number=[];
+            // for( let i=0; i<10;i++){
+            //     number.push(Math.floor(Math.random()*100+1));
+            // }
+            // document.getElementById('Random').textContent=number.join(',');
+            // let Max=Math.max(...number);
+            // let Min=Math.min(...number);
+            // document.getElementById('MaxMin').textContent=`Max value:${Max}, Min value:${Min}`; 
+
+             // <!-- 2 -->    
+            // push(): Массивын төгсгөлд шинэ элемент нэмнэ.
+            // let fruits = ['Apple', 'Banana', 'Orange'];
+            // // 'push' ашиглан шинэ жимс нэмнэ
+            // fruits.push('Mango', 'Pineapple');
+            // console.log(fruits); 
+            // // ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple']     
+
+            //splice() нь эх массивыг өөрчилж, устгасан элементүүдийг буцаадаг.
+            // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            // let result="";
+            // result=months.splice(7,11)
+            // console.log(result);
+
+            // lastIndexOf(): Массив доторх өгөгдсөн утгын сүүлчийн индекстэй тэнцүү байршлыг олоход ашиглагддаг.
+            // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            // let result="";
+            // console.log(months);
+            // result=months.lastIndexOf("Apr");
+            // console.log(result);
+
+            // <!-- 3 -->
+            
+            document.getElementById("myInput").addEventListener("input", function() {
+            var inputText = this.value;  // Input талбарт бичсэн утга
+            var count = 0;  // 'b' үсгийн тоо
+
+            for (var i = 0; i < inputText.length; i++) {
+                if (inputText[i].toLowerCase() === 'b') {
+                    count++;
+                }
+            }
+            alert("b үсгийн тоо: " + count);
+        });
+
+           // <!-- 4 -->
+
+           let word=prompt("Insert word contain letter'a'")
+            let change="";
+
+            for(let i=0; i<word.length; i++){
+                if(word[i]==="a"){
+                    change+="";
+                }
+                else{
+                    change+=word[i]
+                }
+            }
+            alert(change);
+
+
+
+        </script>
+    </body>
+</html>

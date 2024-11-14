@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- <h1 id="MaxMin"></h1>
+        <p id="Random"></p> -->
+        <div id="myDiv" style="width: 100px; height: 100px; background-color: red; margin: 20px;"></div>
+        <button onclick="changeColor()">Өнгө солих</button>
+        <script>
+             // <!-- 1 -->           
+            // let number=[];
+            // for( let i=0; i<10;i++){
+            //     number.push(Math.floor(Math.random()*100+1));
+            // }
+            // document.getElementById('Random').textContent=number.join(',');
+            // let Max=Math.max(...number);
+            // let Min=Math.min(...number);
+            // document.getElementById('MaxMin').textContent=`Max value:${Max}, Min value:${Min}`;
+
+             // <!-- 2 -->    
+            // push(): Массивын төгсгөлд шинэ элемент нэмнэ.
+
+            // let fruits = ['Apple', 'Banana', 'Orange'];
+            // // 'push' ашиглан шинэ жимс нэмнэ
+            // fruits.push('Mango', 'Pineapple');
+            // console.log(fruits); 
+            // // ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple']     
+            
+             // reduce(): Массивын бүх элементийг нэгтгэж нэг утга үүсгэнэ (жишээ нь, нийлбэр, дундаж тоо гэх мэт).
+
+            // let numbers = [1, 2, 3, 4, 5];
+            // // 'reduce' ашиглан бүх элементийг нэмнэ
+            // let sum = numbers.reduce(function(accumulator, currentValue) {
+            // return accumulator + currentValue;
+            // }, 0); // 0 нь эхлээд accumulator утга
+            // console.log(sum); 
+            // // 15
+            
+            //splice() нь эх массивыг өөрчилж, устгасан элементүүдийг буцаадаг.
+            // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            // let result="";
+            // result=months.splice(7,11)
+            // console.log(result);  
+            
+              // <!-- 3 -->
+            // function changeColor() {
+            // var div = document.getElementById("myDiv");
+            // div.style.backgroundColor = "yellow"; 
+            // } 
+
+            // <!-- 4 -->
+
+            let word=prompt("Insert word contain letter'a'")
+            let change="";
+
+            for(let i=0; i<word.length; i++){
+                if(word[i]==="a"){
+                    change+="";
+                }
+                else{
+                    change+=word[i]
+                }
+            }
+            alert(change);
+
+        </script>
+    </body>
+</html>
