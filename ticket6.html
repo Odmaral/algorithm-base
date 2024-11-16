@@ -7,22 +7,22 @@
         <script>
 
             // <!-- 1 -->
-            // let random=[];
-            // for(let i=0; i<10; i++){
-            //     random.push(Math.floor(Math.random()*100+1));
-            // }
-            // document.getElementById('random').textContent=`Random massive:${random.join(',')}; `;
+            let random=[];
+            for(let i=0; i<10; i++){
+                random.push(Math.floor(Math.random()*100+1));
+            }
+            document.getElementById('random').textContent=`Random massive:${random.join(',')}; `;
 
-            // let Maxvalue=Math.max(...random);
-            // let Minvalue=Math.min(...random);
+            let Maxvalue=Math.max(...random);
+            let Minvalue=Math.min(...random);
 
-            // let minIndex=random.indexOf(Minvalue);
-            // let maxIndex=random.indexOf(Maxvalue);
+            let minIndex=random.indexOf(Minvalue);
+            let maxIndex=random.indexOf(Maxvalue);
 
-            // random[minIndex]=Maxvalue;
-            // random[maxIndex]=Minvalue;
+            random[minIndex]=Maxvalue;
+            random[maxIndex]=Minvalue;
 
-            // document.getElementById('replace').textContent=`New Random Massive: ${random.join(',')}`;
+            document.getElementById('replace').textContent=`New Random Massive: ${random.join(',')}`;
 
             // <!-- 2 -->
 
