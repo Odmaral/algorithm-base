@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            //  let n=20;
+            //  for( let i=0; i<10; i++){
+            //     for(let j=0; j<n; j++){
+            //         if(i==5){
+            //             document.write("#");
+            //         }
+            //         else if (j == 15) { 
+            //             document.write("#");
+            //         } else {
+            //             document.write(" "); 
+            //         }
+            //     }
+            //     document.write("<br/>")
+            //  }
+
+            // let a=[25,14,5,7,8,9,32,84,75]
+            // let sum=0
+            // let min=100;
+            // let max=0;
+            // a.forEach((el)=>{
+            //     if(max<el){
+            //         max=el
+            //     }
+            //     if(min>el){
+            //         min=el
+            //     }
+            //     return sum+=el;
+            //      }
+            // )
+            // console.log(`Нийлбэр нь :${sum}, Хамгийн их утга:${max}, Хамгийн бага утга ${min}`)
+
+            let utga=prompt("Toon utga oruuulana uu")
+            let haih=prompt("Haih utga oruuulana uu")
+            let count=0;
+
+            for (let i in utga) {
+                if(utga[i]==haih){
+                    count++;
+                }              
+            }
+            alert(+utga+ "энэ тоонд" +haih+ "тоон утга байна"+count+"ширхэг байна" )
+        </script>
+    </body>
+</html>
